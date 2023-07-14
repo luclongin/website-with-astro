@@ -1,0 +1,73 @@
+---
+import Hamburger from "../Hamburger/Hamburger.astro";
+import "./Navigation.css";
+import { navLinks } from "../../assets/data/navigation-data";
+import Logo from "../Logo/Logo.astro";
+const currentPath = Astro.url.pathname;
+---
+
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="navbar">
+    <div class="navbar-container">
+        <Logo />
+        <!--Navigation List-->
+        <nav class="nav-list" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <Hamburger />
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="nav-ul-wrapper">
+                <ul id="nav-expanded" class="nav-ul" aria-expanded="false">
+                    {
+                        navLinks.map((link) =>
+                            !link.dropdown ? (
+                                <li class="nav-li">
+                                    <a
+                                        href={link.url}
+                                        class={
+                                            currentPath === link.url
+                                                ? "nav-active nav-li-link"
+                                                : "nav-li-link"
+                                        }
+                                    >
+                                        {link.title}
+                                    </a>
+                                </li>
+                            ) : (
+                                <li class="nav-li nav-dropdown" tabindex="0">
+                                    <span class="nav-li-link">
+                                        {link.title}
+                                        <img
+                                            class="nav-drop-icon"
+                                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
+                                            alt="dropdown icon"
+                                            width="15"
+                                            height="15"
+                                            decoding="async"
+                                            aria-hidden="true"
+                                        />
+                                    </span>
+                                    <ul class="nav-drop-ul">
+                                        {link.dropdown.map((dropdownItem) => (
+                                            <li class="nav-drop-li">
+                                                <a
+                                                    href={dropdownItem.url}
+                                                    class="nav-li-link nav-drop-link"
+                                                >
+                                                    {dropdownItem.title}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            )
+                        )
+                    }
+                </ul>
+            </div>
+        </nav>
+        <a href="" class="nav-button-solid nav-button">Contact Us</a>
+    </div>
+</header>
