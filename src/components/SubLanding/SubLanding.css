@@ -1,0 +1,45 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    #sub-landing {
+        position: relative;
+        background-image: url('https://d33wubrfki0l68.cloudfront.net/images/6a44651e58ec62b75bf582a2378dcc97a0f52c70/landing.jpg');
+        height: 40vh;
+        width: 100%;
+        background-size: cover;
+        padding-top: 9rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sub-landing-dark {
+        background: #000;
+        opacity: .7;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        position: absolute;
+    }
+
+    #sub-landing h1 {
+        color: #f5f5f5;
+        font-size: 3em;
+        position: relative;
+        font-family: 'Slackey', cursive;
+        z-index: 10;
+        -webkit-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+}

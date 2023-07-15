@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MenuSection from '../components/MenuSection/MenuSection.astro';
+import "../styles/root.css";
+import SubLanding from '../components/SubLanding/SubLanding.astro';
+---
+
+<BaseLayout pageTitle="Menu">
+    <!-- ============================================ -->
+    <!-- ============     SUBLANDNG     ================ -->
+    <!-- ============================================ -->
+    <SubLanding title="Our Menu" />
+    <!-- ============================================ -->
+    <!-- ============     MENU DATA  ================ -->
+    <!-- ============================================ -->
+    <MenuSection />
+</BaseLayout>

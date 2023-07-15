@@ -1,0 +1,64 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    .menu-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section h2 {
+        font-family: 'Slackey', cursive;
+        font-size: 2em;
+        margin: 0rem 0 2rem;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    .menu-section .description {
+        width: 100%;
+        margin: 0 0 2rem;
+        text-align: center;
+    }
+
+    .menu-section-list {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .menu-item {
+        margin: 2rem 0 4.5rem;
+    }
+
+    .menu-item h3 {
+        font-family: 'Rock Salt', cursive;
+        color: var(--primary);
+        font-size: 1.3em;
+    }
+
+    .menu-line {
+        height: 1px;
+        width: 90%;
+        background: var(--primary);
+        margin: 0 auto 15px auto;
+    }
+
+    .menu-item p {
+        margin-bottom: 1rem;
+    }
+
+    .menu-item-price {
+        color: var(--primary);
+    }
+
+    #apps {
+        background-image: url('https://d33wubrfki0l68.cloudfront.net/images/ed7603dcedddce02997e873edfb26c2514914d7f/knife-and-lettuce.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

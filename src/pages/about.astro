@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MenuSection from '../components/MenuSection/MenuSection.astro';
+import "../styles/root.css";
+import SubLanding from '../components/SubLanding/SubLanding.astro';
+import History from "../components/History/History.astro";
+import Journey from "../components/Journey/Journey.astro";
+---
+
+<BaseLayout pageTitle="About Us">
+    <!-- ============================================ -->
+    <!-- ============     SUBLANDNG     ================ -->
+    <!-- ============================================ -->
+    <SubLanding title="About Us" />
+    <!-- ============================================ -->
+    <!-- ============     ABOUT HISTORY  ============ -->
+    <!-- ============================================ -->
+    <History />
+    <!-- ============================================ -->
+    <!-- ============     JOURNEY  ============ -->
+    <!-- ============================================ -->
+    <Journey />
+    
+</BaseLayout>

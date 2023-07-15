@@ -1,0 +1,76 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    #contact {
+        overflow: hidden;
+        position: relative;
+        color: #ffffff;
+        background-image: url('https://d33wubrfki0l68.cloudfront.net/images/9b55858632e2fa31c8614d0e3838985128f0be7c/landing-mini.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-dark {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: .95;
+        background: var(--primary);
+    }
+
+    .top-svg {
+        position: absolute;
+        bottom: -2px;
+        z-index: 1000;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .bottom-svg {
+        position: absolute;
+        top: -2px;
+        z-index: 1000;
+    }
+
+    #contact h2,
+    #contact p {
+        position: relative;
+        z-index: 20;
+        color: #ffffff;
+    }
+
+    #contact h2 {
+        margin-bottom: 2rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 2rem;
+        font-family: 'Slackey', cursive;
+        margin-top: 2rem;
+    }
+
+    #contact p {
+        width: 80%;
+    }
+
+    #contact .button-solid {
+        background-color: #fff;
+        color: var(--primary);
+        margin: 1.5rem 0 2.5rem;
+    }
+
+    .menu-strip-dark {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: .95;
+        background: var(--primary);
+    }
+}

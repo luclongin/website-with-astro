@@ -1,0 +1,31 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    .footer-item {
+        margin-bottom: 3rem;
+    }
+
+    .footer-item h2 {
+        font-family: 'Slackey', cursive;
+        text-align: left;
+        font-size: 2.2em;
+        font-weight: 400;
+    }
+
+    .footer-line {
+        width: 60%;
+        height: 2px;
+        background: var(--primary);
+        margin-bottom: 2rem;
+        margin-top: 0.25rem;
+    }
+
+    .footer-item a {
+        text-decoration: none;
+        display: block;
+        margin: 1rem 0;
+    }
+}

@@ -1,0 +1,12 @@
+---
+import { showcaseItems } from '../../assets/data/showcase-items';
+import ShowcaseItem from '../ShowcaseItem/ShowcaseItem.astro';
+import "./Showcase.css";
+---
+<section id="gyros-showcase" class="section container">
+    <h2>AB's Gyros</h2>
+    {
+        showcaseItems.map((item) => <ShowcaseItem hideonmobile={item.hideonmobile} title={item.title} imgUrl={item.imgUrl} description={item.description} />)
+    }
+    <a href="/menu/" class="button-solid showcase-button">View All Gyros</button>
+</section>

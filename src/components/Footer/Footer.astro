@@ -1,0 +1,39 @@
+---
+import "./Footer.css";
+import FooterItem from "../FooterItem/FooterItem.astro";
+import { footerLinks } from '../../assets/data/footer.js';
+import Branding from "../Branding/Branding.astro";
+---
+<footer>
+    <div class="section container">
+        <div class="footer-intro">
+            <div class="logoContainer">
+                <a href="" class="footer-logo" aria-label="back to home">
+                    <img src="https://d33wubrfki0l68.cloudfront.net/5cae26726021b6f6e62e6e455b0fa9a0786b2991/5dcc8/images/vertical-logo.png" alt="Gyros Logo" width="132" height="50" alt="logo"
+                    width="240"
+                    height="50"
+                    aria-hidden="true"
+                    decoding="async" />
+                </a>
+            </div>
+            <p>AB's Hillbilly Gyros is a family owned gyros restaurant in Oak Harbor, WA.  We 
+                offer unique flavors and combinations with our "hillbilly" style gyros and combos.
+            </p>
+        </div>
+        {
+            footerLinks.map((section) => <FooterItem sectionTitle={section.sectionTitle}
+                                                    sectionUrls={section.sectionUrls} />
+                            )
+        }
+        <div class="footer-item">
+            <h2>Contact</h2>
+            <div aria-hidden="true" class="footer-line"></div>
+            <p><span>Phone:</span> 360-279-0190</p>
+            <p><span>Email:</span> jessie_j_abrahamson@yahoo.com</p>
+            <br />
+            <p>32760 State Route 20</p>
+            <p>Oak Harbor, WA 98277</p>
+        </div>
+    </div>
+    <Branding />
+</footer>

@@ -1,0 +1,12 @@
+---
+import "./FooterItem.css";
+const {sectionTitle, sectionUrls} = Astro.props;
+---
+
+<div class="footer-item">
+    <h2>{sectionTitle}</h2>
+    <div aria-hidden="true" class="footer-line"></div>
+    {
+        sectionUrls.map((item) => <a href={item.url}>{item.title} </a>)
+    }
+</div>

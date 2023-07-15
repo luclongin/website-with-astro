@@ -1,8 +1,10 @@
 
 :root {
     /* remove this whole :root and put in your global css file that's shared on all pages, then just remove this section from all other Stitches you add later, only need this once in your global stylesheet */
-    --primary: #5A766A;
-    --primaryLight: #5A766A;
+    --primary: #1c7f3e;
+    --primary: #1c7f3e;
+    --dark: rgb(8, 38, 19);
+    --primaryLight: #1c7f3e;
     --secondary: #FFBA43;
     --secondaryLight: #FFBA43;
     --headerColor: #1a1a1a;
@@ -17,8 +19,179 @@
     --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
   }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+img {
+  overflow: clip;
+  overflow-clip-margin: content-box;
+}
+
+p {
+  line-height: 1.7em;
+  font-size: 1em;
+}
+
+p, span, a, li {
+  color: #4c4c4c;
+}
+
+.container {
+  padding: 0 36px;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.section {
+  padding-top: 50px!important;
+  padding-bottom: 50px!important;
+  position: relative;
+}
+
+/* slackey-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Slackey';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/slackey-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* raleway-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/raleway-v28-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* raleway-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/raleway-v28-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* raleway-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../assets/fonts/raleway-v28-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* rock-salt-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/rock-salt-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+
+.button-transparent {
+  font-size: 1rem;
+  /* 46px - 56px */
+  line-height: clamp(3.2rem, 5.5vw, 3.2rem);
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+  padding: 6px 30px;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.button-transparent:before {
+  content: '';
+  position: absolute;
+  display: block;
+  background: #000;
+  opacity: 1;
+  /* so it sits on top of the border */
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  z-index: -1;
+  transform-origin: left;
+  /* this is what creates the grow affect on hover */
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+.button-transparent:hover:before {
+  transform: scaleX(1);
+}
+
+.nav-button {
+  display: none;
+}
+
+.button-solid {
+  font-size: 1rem;
+  line-height: 3.2rem;
+  text-decoration: none;
+  height: 100%;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.25rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  padding: 6px 30px;
+  border: none;
+}
+
+.button-solid:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #000;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 0.25rem;
+  transition: width .3s;
+}
+
+.button-solid:hover:before {
+  width: 100%;
+}
+
+.button-transparent {
+  color: #fff;
+  border: 2px solid var(--bodyTextColorWhite);
 }

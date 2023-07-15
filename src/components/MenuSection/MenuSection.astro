@@ -1,0 +1,32 @@
+---
+import "./MenuSection.css";
+import { menuData } from "../../assets/data/menu";
+---
+    {
+        menuData.map((menuSection) => 
+            <section id={menuSection.menuId} class="menu-section section container">
+                <h2>{menuSection.menuSectionTitle}</h2>
+                <p class="description">{menuSection.menuSectionDesc}</p>
+                <img
+                    aria-hidden="true"
+                    class="green"
+                    src="https://d33wubrfki0l68.cloudfront.net/c3639534fb6df1e55492baede485cc23c6b70bc4/3e15a/images/green-design.png"
+                    alt=""
+                    height="30px"
+                />
+                <div class="menu-section-list">
+                    {menuSection.menuSectionData.map((item) => (
+                        <div class="menu-item">
+                            <h3>{item.menuItemTitle}</h3>
+                            <div aria-hidden="true" class="menu-line" />
+                            <p>{item.menuItemDesc}</p>
+                            <p class="menu-item-price">
+                                {item.menuItemPrice} $
+                            </p>
+                            <p>{item.menuItemAdditional}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )
+    }

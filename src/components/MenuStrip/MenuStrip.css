@@ -1,0 +1,64 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    .wave {
+        position: absolute;
+        top: -1px !important;
+        left: -500px;
+        margin: auto;
+        height: 50px;
+        z-index: 10;
+        -webkit-animation-name: wave;
+        animation-name: wave;
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    #menu-strip {
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://d33wubrfki0l68.cloudfront.net/images/72d15ea068196d72cf211f37e97717916217e960/random-food-mini.jpg');
+    }
+
+    #menu-strip h2 {
+        color: #f5f3f3;
+        text-transform: uppercase;
+        font-size: 2.2em;
+        font-family: 'Slackey', cursive;
+        z-index: 20;
+        position: relative;
+        margin-top: 2.5rem;
+    }
+
+    .menu-strip-dark {
+        position: absolute;
+        background: var(--primary);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        opacity: .92;
+    }
+
+    #menu-strip .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #menu-strip .button-transparent {
+        color: #ffffff;
+        border-color: #ffffff;
+        width: 60%;
+    }
+}

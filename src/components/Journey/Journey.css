@@ -1,0 +1,31 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    #journey {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .journey-line {
+        height: 1px;
+        width: 100%;
+        margin: 0.5rem 0 1rem;
+        background-color: var(--primary);
+    }
+
+    #journey h1 {
+        font-size: 2.2em;
+    }
+
+    #journey .greek-design {
+        position: absolute;
+        bottom: -150px;
+    }
+
+    #journey p:nth-last-child(2) {
+        margin-bottom: 6rem;
+    }
+}

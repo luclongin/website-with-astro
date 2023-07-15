@@ -1,0 +1,10 @@
+---
+import "./ShowcaseItem.css";
+const { title, imgUrl, description, hideonmobile } = Astro.props;
+---
+
+<article class={hideonmobile ? "showcase-item hideonmobile": "showcase-item"}>
+    <img class="showcase-item-img" src={imgUrl} alt={title} />
+    <h3 class="showcase-item-title">{title}</h3>
+    <p class="showcase-item-text">{description}</p>
+</article>

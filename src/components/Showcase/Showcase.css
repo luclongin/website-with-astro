@@ -1,0 +1,25 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    #gyros-showcase {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+
+    #gyros-showcase h2 {
+        font-family: 'Slackey', cursive;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .showcase-button {
+        margin-top: 2rem;
+    }
+}

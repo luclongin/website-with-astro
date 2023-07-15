@@ -1,0 +1,27 @@
+---
+import "./.css";
+const {sectionTitle, sectionId, sectionImgUrl, buttonText, buttonUrl} = Astro.props;
+---
+
+<section id={sectionId} class="container section">
+    <img
+        class="greek"
+        aria-hidden="true"
+        src="https://d33wubrfki0l68.cloudfront.net/7335c3d0649b24d7a1e9a611c05b80818a39a89c/9ddae/images/most-faded-greek-design.png"
+        alt=""
+    />
+    <img
+        class="ourpromise-img"
+        src={sectionImgUrl}
+        alt="Our Promise Img"
+        width="200"
+        height="200"
+    />
+    <h2 class="ourpromise-title">{sectionTitle}</h2>
+    <slot />
+    <div class="ourpromise-button-container">
+        <a href={buttonUrl} class="button-transparent ourpromise-button"
+            >{buttonText}</a
+        >
+    </div>
+</section>

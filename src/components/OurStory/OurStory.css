@@ -1,0 +1,30 @@
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023px */
+@media only screen and (max-width: 63.9375rem) {
+    #our-story {
+        background-color: #fafafa;
+        position: relative;
+    }
+
+    .our-story-button {
+        color: var(--primary);
+        border-color: var(--primary);
+        width: 70%;
+        margin-top: 2rem;
+    }
+
+    #our-story h2 {
+        font-family: 'Slackey', cursive;
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #our-story p span {
+        font-family: 'Slackey', cursive;
+        font-size: 3rem;
+    }
+}

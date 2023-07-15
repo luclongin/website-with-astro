@@ -1,0 +1,25 @@
+---
+import './Hero.css';
+---
+<section id="hero" class="container">
+    <div class="hero-container">
+        <h1 class="hero-title">The Best Gyros In Oak Harbor</h1>
+        <p class="hero-text">
+            Locally owned and operated here in Oak Harbor, ABs Hillbilly Gyros promises the best quality 
+            ingredients, service, and experience.  Check us out and see why we are the best choice for Gyros 
+            in the Puget Sound.
+        </p>
+        <div class="hero-button-container">
+            <a href="/menu/" class="button-solid hero-button-solid">See Our Menu</a>
+            <a href="/contact/" class="button-transparent button-transparent hero-button-transparent">Order Now</a>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="hero-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg" alt="kitchen" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                                

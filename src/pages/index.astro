@@ -1,18 +1,32 @@
 ---
-import Header from '../components/Header.astro';
-import '../styles/root.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero/Hero.astro";
+import OurPromise from "../components/OurPromise/OurPromise.astro";
+import MenuStrip from "../components/MenuStrip/MenuStrip.astro";
+import "../styles/root.css";
+import Showcase from "../components/Showcase/Showcase.astro";
+import OurStory from "../components/OurStory/OurStory.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header />
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle="Home">
+	<!-- ============================================ -->
+	<!-- ============     HERO       ================ -->
+	<!-- ============================================ -->
+	<Hero />
+	<!-- ============================================ -->
+	<!-- ============     OUR PROMISE     =========== -->
+	<!-- ============================================ -->
+	<OurPromise />
+	<!-- ============================================ -->
+	<!-- ============     MENU STRIP     ============ -->
+	<!-- ============================================ -->
+	<MenuStrip />
+	<!-- ============================================ -->
+	<!-- ============     SHOWCASE     ============== -->
+	<!-- ============================================ -->
+	<Showcase />
+	<!-- ============================================ -->
+	<!-- ============     OUR STORY     ============= -->
+	<!-- ============================================ -->
+	<OurStory />
+</BaseLayout>
